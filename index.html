@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas | Developer Card</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'blob-reverse': 'blob-reverse 10s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        'blob-reverse': {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(-30px, 50px) scale(1.1)' },
+                            '66%': { transform: 'translate(20px, -20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Ensuring Safari support for backdrop filter */
+        .glass-panel {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 font-sans text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+
+    <!-- Deep indigo/purple gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-900 to-indigo-900 opacity-90 z-0"></div>
+
+    <!-- Floating Background Shapes -->
+    <!-- Hot Pink Circle -->
+    <div class="absolute top-[10%] left-[15%] md:top-[20%] md:left-[25%] w-64 h-64 md:w-80 md:h-80 bg-pink-500 rounded-full mix-blend-screen opacity-80 animate-blob z-0 blur-[2px]"></div>
+    
+    <!-- Bright Orange Circle -->
+    <div class="absolute bottom-[10%] right-[15%] md:bottom-[15%] md:right-[25%] w-72 h-72 md:w-96 md:h-96 bg-orange-500 rounded-full mix-blend-screen opacity-80 animate-blob-reverse z-0 blur-[2px]"></div>
+    
+    <!-- Cyan Accent Circle (Subtle) -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-cyan-500 rounded-full mix-blend-screen opacity-40 animate-blob z-0 animation-delay-2000 blur-[4px]"></div>
+
+    <!-- Main Glass Card -->
+    <main class="glass-panel relative z-10 w-[90%] max-w-2xl bg-white/10 border border-white/20 rounded-3xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] flex flex-col items-center text-center transition-transform duration-500 hover:scale-[1.02]">
+        
+        <!-- Profile/Avatar Placeholder (Optional visual anchor) -->
+        <div class="w-24 h-24 mb-6 rounded-full bg-white/10 border border-white/30 flex items-center justify-center shadow-inner">
+            <span class="text-3xl font-bold bg-gradient-to-br from-pink-300 to-orange-300 bg-clip-text text-transparent">M</span>
+        </div>
+
+        <!-- Typography -->
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3 drop-shadow-md">
+            Hi, I'm Manas
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 font-medium mb-10 drop-shadow-sm">
+            B.Tech Computer Engineering Student
+        </p>
+
+        <!-- Skills Section -->
+        <div class="w-full mb-10">
+            <p class="text-sm font-semibold text-white/50 uppercase tracking-widest mb-4">Core Skills</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <!-- Glass Pills -->
+                <span class="glass-panel px-5 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-medium hover:bg-white/20 transition-colors duration-300 cursor-default shadow-sm">
+                    C++
+                </span>
+                <span class="glass-panel px-5 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-medium hover:bg-white/20 transition-colors duration-300 cursor-default shadow-sm">
+                    DSA
+                </span>
+                <span class="glass-panel px-5 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-medium hover:bg-white/20 transition-colors duration-300 cursor-default shadow-sm">
+                    Web Development
+                </span>
+                <span class="glass-panel px-5 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-medium hover:bg-white/20 transition-colors duration-300 cursor-default shadow-sm">
+                    Systems Engineering
+                </span>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 w-full justify-center mt-2">
+            <!-- GitHub Button -->
+            <a href="#" class="glass-panel group relative px-8 py-3.5 bg-white/10 hover:bg-white/20 border border-white/30 rounded-xl font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2 overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256" class="transition-transform group-hover:scale-110">
+                    <path d="M128,24A104,104,0,0,0,95.12,226.78c5.2,1,7.12-2.26,7.12-5v-18c-29,6.28-35.12-14-35.12-14-4.72-12-11.52-15.2-11.52-15.2-9.44-6.48,.72-6.32,.72-6.32,10.4,1.16,15.92,10.72,15.92,10.72,9.28,15.92,24.32,11.32,30.24,8.64a22.21,22.21,0,0,1,6.64-14c-23.12-2.64-47.44-11.56-47.44-51.48a40.18,40.18,0,0,1,10.72-27.92,37.38,37.38,0,0,1,1-27.52s8.72-2.8,28.56,10.64a98.43,98.43,0,0,1,52,0c19.84-13.44,28.56-10.64,28.56-10.64a37.38,37.38,0,0,1,1,27.52,40.18,40.18,0,0,1,10.72,27.92c0,40-24.32,48.84-47.52,51.4a24.94,24.94,0,0,1,7.12,19.32v28.8c0,2.8,1.88,6.08,7.2,5A104,104,0,0,0,128,24Z"></path>
+                </svg>
+                GitHub
+            </a>
+            
+            <!-- View Projects Button -->
+            <a href="#" class="glass-panel group relative px-8 py-3.5 bg-indigo-500/30 hover:bg-indigo-500/50 border border-indigo-300/40 rounded-xl font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2 overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256" class="transition-transform group-hover:scale-110 group-hover:translate-x-1">
+                    <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                </svg>
+                View Projects
+            </a>
+        </div>
+        
+    </main>
+
+</body>
+</html>
+
